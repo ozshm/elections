@@ -28,7 +28,7 @@ contract Election is Ownable, VotingCard {
 
     function addCandidate(string memory _name, string memory _slogan) onlyOwner public {
         candidatesCount++;
-        candidates[candidatesCount] = Candidate(candidatesCount, _name, _slogan, 5);
+        candidates[candidatesCount] = Candidate(candidatesCount, _name, _slogan, 0);
     }
 
     function toggleIsVotingOpen() onlyOwner public  {
